@@ -1,3 +1,15 @@
+
+
 <mat-toolbar color="primary">
-  <span>Application Title</span>
+  <button mat-button routerLink="">Home</button>
+  <button mat-button [matMenuTriggerFor]="menu">Projects</button>
+  <mat-menu #menu="matMenu" routerLinkActive="router-link-active">
+    <button mat-menu-item [routerLink]="['projects']">
+        <span>List</span>
+    </button>
+    <button mat-menu-item [routerLink]="['projects/new']">
+        <span>New</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>
+

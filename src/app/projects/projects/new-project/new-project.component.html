@@ -1,0 +1,10 @@
+<h2>New Project</h2>
+<form>
+  <section>
+    <label for="name">Name: </label>
+    <input name="name" type="text" [(ngModel)]="project.name" placeholder="Project name" />
+    <input value="Save" type="submit" (click)="saveProject()" />
+   </section>
+</form>
+
+<pre>{{ project | json }}</pre>

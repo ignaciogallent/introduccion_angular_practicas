@@ -1,0 +1,9 @@
+<h2>Projects</h2>
+<ul *ngIf="projects.length>0; else empty">
+  <li *ngFor="let project of projects">
+  <span><a [routerLink]="[(project.id)]">{{ project.name }}</a></span>
+  </li>
+ </ul>
+ <ng-template #empty> <i>No data yet</i> </ng-template>
+
+ <router-outlet></router-outlet>
